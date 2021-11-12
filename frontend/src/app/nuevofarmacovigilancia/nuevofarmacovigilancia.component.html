@@ -1,0 +1,102 @@
+<div>
+    <h2>NUEVO FARMACOVIGILANCIA:</h2>
+    <form [formGroup]="farmacovigilanciaForm" (ngSubmit)="addfarmacovigilancia()">
+
+      <p>
+        ID persona: <input type="string" placeholder="ID persona" formControlName="idPersona" />*
+        <ng-container
+          *ngIf="!formControls.idPersona.valid &&formControls.idPersona.touched">
+          <p *ngIf="formControls.idPersona.errors.required">
+            Este Campo es Obligatorio
+          </p>
+        </ng-container>
+      </p>
+
+    <p>
+      Persona: <input type="string" placeholder="Persona" formControlName="persona" />*
+      <ng-container
+        *ngIf="!formControls.persona.valid &&formControls.persona.touched">
+        <p *ngIf="formControls.persona.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Fecha: <input type="string" placeholder="Fecha" formControlName="fecha" />*
+      <ng-container
+        *ngIf="!formControls.fecha.valid && formControls.fecha.touched">
+        <p *ngIf="formControls.fecha.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+  
+    <p>
+      DNI: <input type="string" placeholder="DNI" formControlName="dni" />*
+      <ng-container
+        *ngIf="!formControls.dni.valid &&formControls.dni.touched">
+        <p *ngIf="formControls.dni.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Telefono: <input type="string" placeholder="Telefono" formControlName="telefono" />*
+      <ng-container
+        *ngIf="!formControls.telefono.valid &&formControls.telefono.touched">
+        <p *ngIf="formControls.telefono.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Fiebre: <input type="string" placeholder="Fiebre" formControlName="fiebre" />*
+      <ng-container
+        *ngIf="!formControls.fiebre.valid &&formControls.fiebre.touched">
+        <p *ngIf="formControls.fiebre.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Tos: <input type="string" placeholder="Tos" formControlName="tos" />*
+      <ng-container
+        *ngIf="!formControls.tos.valid &&formControls.tos.touched">
+        <p *ngIf="formControls.tos.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Dificultad: <input type="string" placeholder="Dificultad" formControlName="dificultad" />*
+      <ng-container
+        *ngIf="!formControls.dificultad.valid &&formControls.dificultad.touched">
+        <p *ngIf="formControls.dificultad.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Malestar: <input type="string" placeholder="Malestar" formControlName="malestar" />*
+      <ng-container
+        *ngIf="!formControls.malestar.valid &&formControls.malestar.touched">
+        <p *ngIf="formControls.malestar.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+
+      <p>
+        <input type="submit" value="Añadir" [disabled]="farmacovigilanciaForm.invalid" />
+        <input type="submit" value="Atrás" (click) = "atras()" />
+      </p>
+    </form>
+  </div>
+  

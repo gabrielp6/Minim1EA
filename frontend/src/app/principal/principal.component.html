@@ -1,0 +1,30 @@
+<div class="lista">
+    <h2>LISTA DE USUARIOS</h2>
+
+    <div>
+        <button (click)="nuevoUsuario()" class="button" >AÑADIR UN USUARIO</button>
+    </div>
+    
+    <div>
+        <app-datos-usuarios *ngFor="let usuario of usuarios"
+            [usuario]="usuario">
+        </app-datos-usuarios>
+    </div>
+    
+</div>
+
+
+<div class="lista">
+    <h2>LISTA DE SEGUIMIENTOS DE FARMACOVIGILANCIA:</h2>
+
+    <div>
+        <button (click)="nuevoFarmacovigilancia()" class="button" >AÑADIR UNA FARMACOVIGILANCIA</button>
+    </div>
+
+    <div>
+        <app-datos-farmacovigilancias *ngFor="let farmacovigilancia of farmacovigilancias"
+            [farmacovigilancia]="farmacovigilancia">
+        </app-datos-farmacovigilancias>
+    </div>
+
+</div>
